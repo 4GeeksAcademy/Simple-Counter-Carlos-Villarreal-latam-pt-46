@@ -1,28 +1,34 @@
 import React from "react";
+import PropTypes, { func } from "prop-types";
+import {Icon} from "./icon";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
-const Home = () => {
+export function SimpleCounter(prop) {
 	return (
-		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container">
+			<div className="Clock">
+				<Icon/>
+			</div>
+			<div className="nine">{props.digitNine %10}</div>
+			<div className="eight">{props.digitEight %10}</div>
+			<div className="seven">{props.digitSeven %10}</div>
+			<div className="six">{props.digitSix %10}</div>
+			<div className="five">{props.digitFive %10}</div>
+			<div className="four">{props.digitFour %10}</div>
+			<div className="three">{props.digitThree %10}</div>
+			<div className="two">{props.digitTwo %10}</div>
+			<div className="one">{props.digitOne %10}</div>
 		</div>
-	);
-};
+	)
+}
 
-export default Home;
+SimpleCounter.PropTypes = {
+	digitNine: PropTypes.number,
+	digitEight: PropTypes.number,
+	digitSeven: PropTypes.number,
+	digitSix: PropTypes.number,
+	digitFive: PropTypes.number,
+	digitFour: PropTypes.number,
+	digitThree: PropTypes.number,
+	digitTwo: PropTypes.number,
+	digitOne: PropTypes.number,
+}

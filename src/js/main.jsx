@@ -1,18 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-//Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
-
-// index.css'
 import '../styles/index.css'
+import { SimpleCounter } from './components/SimpleCounter';
 
-// components
-import Home from './components/Home';
+let counter = 0
+let root = ReactDOM.createRoot(document.getElementById('root'))
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
-)
+setInterval(() => {
+  const six = Math.floor(counter / 100000)
+  const five = Math.floor(counter / 10000)
+  const four = Math.floor(counter / 1000)
+  const three = Math.floor(counter / 100)
+  const two = Math.floor(counter / 10)
+  const one = Math.floor(counter / 1)
+  counter++
+
+  root.render(
+    <React.StrictMode>
+      <SimpleCounter digitSix={six} digitFive={five} digitFour={four} digitThree={three} digitTwo={two} digitOne={one} />
+    </React.StrictMode>,
+  )
+}, 1000)
