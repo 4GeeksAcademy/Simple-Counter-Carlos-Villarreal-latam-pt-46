@@ -1,26 +1,18 @@
-// Import React into the bundle
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-// Include bootstrap npm library into the bundle
-import 'bootstrap';
-import './icons.js';
-import SimpleCounter from "./component/simpleCounter.jsx"
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
-// Include your index.scss file into the bundle
-import '../styles/index.scss';
+//Bootstrap
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap"
 
+// index.css'
+import '../styles/index.css'
 
-let counter = 0;
-const root = ReactDOM.createRoot(document.getElementById('app'));
+// components
+import Home from './components/Home';
 
-setInterval(() => {
-    const four = Math.floor(counter / 1000);
-    const three = Math.floor(counter / 100);
-    const two = Math.floor(counter / 10);
-    const one = Math.floor(counter / 1);
-    counter++;
-    
-    root.render(
-        <SimpleCounter digitOne={one} digitTwo={two} digitThree={three} digitFour={four} />
-    );
-}, 1000);
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Home/>
+  </React.StrictMode>,
+)
