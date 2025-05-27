@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
 import '../styles/index.css'
-import { SimpleCounter } from './components/SimpleCounter';
+import "./components/SecondsCounter";
 
 let counter = 0
 let root = ReactDOM.createRoot(document.getElementById('root'))
@@ -20,7 +20,7 @@ setInterval(() => {
 
   root.render(
     <React.StrictMode>
-      <SimpleCounter digitSix={six} digitFive={five} digitFour={four} digitThree={three} digitTwo={two} digitOne={one} />
+      <SecondsCounter digitSix={six} digitFive={five} digitFour={four} digitThree={three} digitTwo={two} digitOne={one} />
     </React.StrictMode>,
   )
 }, 1000)
