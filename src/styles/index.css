@@ -1,19 +1,3 @@
-@import 'bootstrap/css/bootstrap.css';
-
-.bigCounter{
-    text-align: center;
-    background: black;
-}
-.bigCounter div{
-    display: inline-block;
-    font-size: 60px;
-    line-height: 60px;
-    background: #101010;
-    color: white;
-    padding: 10px;
-    margin: 3px;
-}
-
 /* 
 
     You can write your own styles here...
@@ -25,3 +9,18 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@import 'bootstrap/scss/bootstrap.scss';
+
+.bigCounter {
+    text-align: center;
+    background: black;
+}
+.bigCounter div{
+    display: inline-block;
+    font-size: 60px;
+    line-height: 60px;
+    background: #101010;
+    color: white;
+    padding: 10px;
+    margin: 3px
+}
