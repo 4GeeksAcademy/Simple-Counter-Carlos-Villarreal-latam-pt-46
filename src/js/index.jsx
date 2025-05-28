@@ -5,11 +5,9 @@ import "./styles.css";
 //Components
 import SecondsCounter from './components/SecondsCounter';
 
-setInterval(() => {
-  ReactDOM.createRoot(document.getElementById('root'));render(
-    <div>
-      <SecondsCounter/>
-    </div>
-);
-}
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
