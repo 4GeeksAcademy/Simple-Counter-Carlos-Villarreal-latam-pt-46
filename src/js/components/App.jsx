@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import SecondsCounter from './components/SecondsCounter';
+import SecondsCounter from './SecondsCounter';
 
 const App = () => {
   const [seconds, setSeconds] = useState(0);
@@ -12,9 +12,10 @@ const App = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <SecondsCounter seconds={seconds} />;
+  return <SecondsCounter seconds={seconds} />;  
 };
-
+  
+    
 export default App;
 
 // DONE
