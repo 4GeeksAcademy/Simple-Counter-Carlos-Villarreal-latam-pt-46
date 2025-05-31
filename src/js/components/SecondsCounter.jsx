@@ -1,16 +1,22 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons';
 
 const SecondsCounter = ({ seconds }) => {
+  
   return (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="text-8xl font-light text-gray-800 mb-4 animate-pulse">
-        {seconds}
-        </div>
-      <p className="text-xl text-gray-500 font-medium tracking-wider">
-        SEGUNDOS TRANSCURRIDOS
+  
+      <div className="container">
+      <h1 className="bg-dark text-white px-3 py-2 rounded gap-3 m-2"><FontAwesomeIcon icon={faClock} />
+         <div className="row col-sm">
+      {seconds}
+      <p className="text-xl text-gray-400 font-medium tracking-wider">
+      SEGUNDOS TRANSCURRIDOS
       </p>
-  </div>
-  );
-};
+    </div>
+      </h1>
+    </div>
+    );
+  };
 
 export default SecondsCounter;
